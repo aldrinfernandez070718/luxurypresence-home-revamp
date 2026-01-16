@@ -1,4 +1,4 @@
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -779,9 +779,10 @@
             display: none;
             flex-direction: column;
             justify-content: space-between;
-            width: 30px;
-            height: 21px;
+            width: 32px;
+            height: 24px;
             cursor: pointer;
+            z-index: 1001;
         }
 
         .hamburger span {
@@ -789,11 +790,11 @@
             height: 3px;
             background: var(--primary);
             border-radius: 3px;
-            transition: all 0.3s;
+            transition: all 0.35s ease;
         }
 
         .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
+            transform: rotate(45deg) translate(8px, 8px);
         }
 
         .hamburger.active span:nth-child(2) {
@@ -811,25 +812,26 @@
                 height: 48px;       
                 max-width: 180px;
             }
-
-            .nav-links {
-                position: absolute;
-                top: 100%;
+        .nav-links {
+                position: fixed;
+                top: 0;
                 left: 0;
                 width: 100%;
+                height: 100vh;
                 background: white;
                 flex-direction: column;
-                padding: 2rem;
-                gap: 2rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: all 0.4s ease;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                transform: translateX(-100%);
+                transition: transform 0.4s ease;
+                z-index: 1000;
+                padding: 5rem 2rem;
+                overflow-y: auto;
             }
 
             .nav-links.active {
                 transform: translateY(0);
-                opacity: 1;
             }
 
             .hero h1 { font-size: 2.5rem; }
@@ -867,3 +869,28 @@
         html {
             scroll-behavior: smooth;
         }
+        .map-container {
+                position: relative;
+                overflow: hidden;
+                border-radius: 12px;
+              }
+
+              .map-container iframe {
+                width: 100%;
+                height: 450px;
+              }
+
+              @media (max-width: 768px) {
+                .map-container iframe {
+                  height: 350px;
+                }
+              }
+              .contact-social {
+                  justify-content: center !important;
+              }
+
+              @media (max-width: 768px) {
+                  .contact-social {
+                      margin: 2rem auto;
+                  }
+              }
