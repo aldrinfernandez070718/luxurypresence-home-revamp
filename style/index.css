@@ -346,6 +346,8 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.4rem;
     margin-top: 2.5rem;
+    justify-content: center;          
+    justify-items: center;
 }
 
 .gallery-item {
