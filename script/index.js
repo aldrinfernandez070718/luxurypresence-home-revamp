@@ -43,9 +43,6 @@ if (hamburger && navLinks) {
     });
 }
 
-        if (window.innerWidth <= 768) {
-            initMobileMenu();
-        }
 
         // Header scroll effect
         window.addEventListener('scroll', () => {
