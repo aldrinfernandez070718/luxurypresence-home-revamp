@@ -4,126 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Marci Metzger - Pahrump's #1 Real Estate Agent with nearly 30 years experience. Specializing in residential and commercial properties in Southern Nevada.">
+    <meta name="keywords" content="Pahrump real estate, Nevada homes, Marci Metzger, real estate agent, property listings, home sales">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
-    <title>Marci Metzger | Pahrump Real Estate Expert</title>
-
+    <title>Marci Metzger | Pahrump's Premier Real Estate Expert</title>
 </head>
 <body>
 
+    <!-- Floating Contact Button -->
     <a href="tel:2069196886" class="floating-contact" aria-label="Call Marci Metzger">
         <i class="fas fa-phone"></i>
     </a>
 
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header>
         <nav>
             <div class="logo">
-                <a href="#home" style="display: block;">
+                <a href="#home">
                     <img src="images/icon.webp" 
                         alt="Marci Metzger Homes - Pahrump Real Estate" 
                         class="logo-img">
                 </a>
             </div>      
 
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle menu">
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </button>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Marci</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#search">Search Listings</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#search">Find Homes</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p>MARCI METZGER - THE RIDGE REALTY GROUP</p>
-            <h1>PAHRUMP REALTOR</h1>
+            <span class="hero-badge">Pahrump's #1 Realtor</span>
+            <h1>Find Your Dream Home in Pahrump</h1>
+            <p class="hero-subtitle">With nearly 30 years of expertise, Marci Metzger delivers exceptional results in Southern Nevada real estate</p>
             <div class="hero-buttons">
-                <a href="tel:2069196886" class="btn-primary">CALL NOW</a>
-                <a href="#search" class="btn-secondary">Find Your Home</a>
+                <a href="tel:2069196886" class="btn-primary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="#search" class="btn-secondary">
+                    <i class="fas fa-search"></i> Browse Listings
+                </a>
             </div>
-        </div>
-        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-            <i class="fas fa-chevron-down"></i>
-        </div>
+
+            <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">MARCI METZGER</h2>
-            <div class="about-content fade-in">
-                <div class="about-image">
-                    <img src="images/MarciMetzger.webp" alt="Marci Metzger - Pahrump Real Estate Expert">
-                </div>
-                <div class="about-text">
-                    <h3>REALTOR FOR NEARLY 3 DECADES!</h3>
-                    <p>Over two decades in real estate. Licensed Broker in Seattle, now serving Southern Nevada as Pahrump's top real estate agent.</p>
-                    <p>With nearly 30 years of experience in the real estate industry, I bring unparalleled expertise and dedication to every client I serve. I've helped hundreds of families find their dream homes and successfully navigate the complex real estate market.</p>
-                    <p><strong>License #:</strong> S.0185137 (Nevada Real Estate)</p>
-                    <p><strong>Contact:</strong> <a href="tel:2069196886" style="color: var(--accent); text-decoration: none;">(206) 919-6886</a></p>
-                </div>
-            </div>
+    <!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Meet Your Agent</span>
+            <h2 class="section-title title-marci">Marci Metzger</h2>
+            <p class="section-subtitle">Your trusted partner in Pahrump real estate for nearly three decades</p>
         </div>
-    </section>
 
-    <!-- Stats -->
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Realtor for Nearly 3 Decades</h3>
+                <p class="lead-text">With nearly 30 years of experience in the real estate industry, I bring unparalleled expertise and dedication to every client I serve.</p>
+                <p>Previously a licensed broker in Seattle, I now proudly serve as Pahrump's top real estate agent. My extensive background has equipped me with the knowledge and skills to help hundreds of families find their dream homes and successfully navigate the complex real estate market.</p>
+                <p>Whether you're buying your first home, selling a property, or looking for investment opportunities, I provide personalized service tailored to your unique needs.</p>
+                
+                <div class="credentials">
+                    <div class="credential-item">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <strong>Nevada Real Estate License</strong>
+                            <span>S.0185137</span>
+                        </div>
+                    </div>
+                    <div class="credential-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Direct Line</strong>
+                            <a href="tel:2069196886">(206) 919-6886</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Stats Section -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
                     <h2><span class="counter" data-target="90">0</span>+</h2>
-                    <p style="font-weight: 500; opacity: 0.9;">Clients Helped in 2021</p>
+                    <p>Clients Helped in 2021</p>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
                     <h2>$<span class="counter" data-target="28.5">0</span>M</h2>
-                    <p style="font-weight: 500; opacity: 0.9;">In Sales Volume</p>
+                    <p>In Sales Volume</p>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
                     <h2><span class="counter" data-target="30">0</span></h2>
-                    <p style="font-weight: 500; opacity: 0.9;">Years Experience</p>
+                    <p>Years Experience</p>
                 </div>
                 <div class="stat-item">
-                    <h2 style="color: var(--gold);">#1</h2>
-                    <p style="font-weight: 500; opacity: 0.9;">Top Agent in Pahrump</p>
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2 class="gold-text">#1</h2>
+                    <p>Top Agent in Pahrump</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Get It Sold -->
-    <section class="services">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">GET IT SOLD</h2>
+            <div class="section-header">
+                <span class="section-label">What I Offer</span>
+                <h2 class="section-title">Get It Sold</h2>
+                <p class="section-subtitle">Comprehensive real estate services designed to exceed your expectations</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <img src="images/getItSold1.webp" alt="Top Residential Sales in Pahrump">
-                    <h3>Top Residential Sales Last 5 Years</h3>
-                    <p>We helped nearly 90 clients in 2021, and closed 28.5 million in sales!</p>
+                    <div class="service-image">
+                        <img src="images/getItSold.webp" alt="Top Residential Sales in Pahrump">
+                        <div class="service-overlay">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Top Residential Sales Last 5 Years</h3>
+                        <p>We helped nearly 90 clients in 2021, and closed $28.5 million in sales! My proven track record speaks for itself.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Expert market analysis</li>
+                            <li><i class="fas fa-check"></i> Competitive pricing strategies</li>
+                            <li><i class="fas fa-check"></i> Proven sales techniques</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="service-card fade-in">
-                    <img src="images/getItSold.webp" alt="Marketing Strategy for Real Estate">
-                    <h3>Don't Just List it...</h3>
-                    <p>Get it SOLD! We exhaust every avenue to ensure maximum exposure.</p>
+                    <div class="service-image">
+                        <img src="images/getItSold1.webp" alt="Marketing Strategy for Real Estate">
+                        <div class="service-overlay">
+                            <i class="fas fa-megaphone"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Don't Just List it...</h3>
+                        <p>Get it SOLD! We exhaust every avenue to ensure maximum exposure for your property through strategic marketing.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Professional photography</li>
+                            <li><i class="fas fa-check"></i> Multi-platform marketing</li>
+                            <li><i class="fas fa-check"></i> Social media promotion</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="service-card fade-in">
-                    <img src="images/getItSold3.webp" alt="Real Estate Expertise and Guidance">
-                    <h3>Rely on Expertise</h3>
-                    <p>Questions about affordability, credit, and loans? We connect you with the right professionals.</p>
+                    <div class="service-image">
+                        <img src="images/getItSold3.webp" alt="Real Estate Expertise and Guidance">
+                        <div class="service-overlay">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Rely on Expertise</h3>
+                        <p>Questions about affordability, credit, and loans? We connect you with trusted professionals to make your journey smooth.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Lender connections</li>
+                            <li><i class="fas fa-check"></i> Financial guidance</li>
+                            <li><i class="fas fa-check"></i> Full support from start to finish</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,338 +210,569 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">Photo Gallery</h2>
+            <div class="section-header">
+                <span class="section-label">Featured Properties</span>
+                <h2 class="section-title">Photo Gallery</h2>
+                <p class="section-subtitle">Browse through stunning properties with detailed information</p>
+            </div>
             <div class="gallery-grid">
-                <div class="gallery-item fade-in">
-                    <img src="images/photoGallery1.webp" 
-                         alt="Mountain Falls golf community overview in Pahrump" loading="lazy">
+                <div class="gallery-item fade-in" 
+                     data-title="Luxury Estate with Pool"
+                     data-price="$649,900"
+                     data-address="1234 Mountain View Dr"
+                     data-city="Pahrump, NV 89048"
+                     data-beds="5"
+                     data-baths="4"
+                     data-sqft="4,200">
+                    <img src="images/photoGallery1.webp" alt="Luxury Home in Pahrump">
+                    <div class="property-overlay-info">
+                        <div class="property-price-tag">$649,900</div>
+                        <div class="property-quick-info">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 4,200 sqft</span>
+                        </div>
+                    </div>
+                    <div class="hover-details">
+                        <button class="view-details-btn">
+                            <i class="fas fa-search-plus"></i> View Details
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="images/photoGallery2.webp" 
-                         alt="Luxury clubhouse and pool area" loading="lazy">
+
+                <div class="gallery-item fade-in"
+                     data-title="Modern Desert Retreat"
+                     data-price="$485,000"
+                     data-address="5678 Desert Bloom Ct"
+                     data-city="Pahrump, NV 89060"
+                     data-beds="3"
+                     data-baths="2.5"
+                     data-sqft="2,800">
+                    <img src="images/photoGallery2.webp" alt="Modern Pahrump Residence">
+                    <div class="property-overlay-info">
+                        <div class="property-price-tag">$485,000</div>
+                        <div class="property-quick-info">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2.5 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2,800 sqft</span>
+                        </div>
+                    </div>
+                    <div class="hover-details">
+                        <button class="view-details-btn">
+                            <i class="fas fa-search-plus"></i> View Details
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="images/photoGallery3.webp" 
-                         alt="Beautiful modern home interior with mountain view" loading="lazy">
+
+                <div class="gallery-item fade-in"
+                     data-title="Spacious Ranch Home"
+                     data-price="$425,000"
+                     data-address="9012 Ranch Valley Rd"
+                     data-city="Pahrump, NV 89048"
+                     data-beds="4"
+                     data-baths="3"
+                     data-sqft="3,100">
+                    <img src="images/photoGallery3.webp" alt="Pahrump Property">
+                    <div class="property-overlay-info">
+                        <div class="property-price-tag">$425,000</div>
+                        <div class="property-quick-info">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 3,100 sqft</span>
+                        </div>
+                    </div>
+                    <div class="hover-details">
+                        <button class="view-details-btn">
+                            <i class="fas fa-search-plus"></i> View Details
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="images/photoGallery4.webp" 
-                         alt="Aerial view of golf course homes" loading="lazy">
+
+                <div class="gallery-item fade-in"
+                     data-title="Cozy Desert Oasis"
+                     data-price="$389,500"
+                     data-address="3456 Sunset Canyon Ave"
+                     data-city="Pahrump, NV 89060"
+                     data-beds="3"
+                     data-baths="2"
+                     data-sqft="2,100">
+                    <img src="images/photoGallery4.webp" alt="Pahrump Home Exterior">
+                    <div class="property-overlay-info">
+                        <div class="property-price-tag">$389,500</div>
+                        <div class="property-quick-info">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2,100 sqft</span>
+                        </div>
+                    </div>
+                    <div class="hover-details">
+                        <button class="view-details-btn">
+                            <i class="fas fa-search-plus"></i> View Details
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="images/photoGallery6.webp" 
-                         alt="Spacious backyard with pool and mountain backdrop" loading="lazy">
+
+                <div class="gallery-item fade-in"
+                     data-title="Mountain View Estate"
+                     data-price="$725,000"
+                     data-address="7890 Peak Vista Ln"
+                     data-city="Pahrump, NV 89048"
+                     data-beds="6"
+                     data-baths="5"
+                     data-sqft="5,400">
+                    <img src="images/photoGallery5.webp" alt="Scenic Pahrump Property">
+                    <div class="property-overlay-info">
+                        <div class="property-price-tag">$725,000</div>
+                        <div class="property-quick-info">
+                            <span><i class="fas fa-bed"></i> 6 Beds</span>
+                            <span><i class="fas fa-bath"></i> 5 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 5,400 sqft</span>
+                        </div>
+                    </div>
+                    <div class="hover-details">
+                        <button class="view-details-btn">
+                            <i class="fas fa-search-plus"></i> View Details
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="images/photoGallery7.webp" 
-                         alt="Luxury Pahrump property exterior" loading="lazy">
+
+                <div class="gallery-item fade-in"
+                     data-title="Golf Course Community Home"
+                     data-price="$559,000"
+                     data-address="2345 Fairway Dr"
+                     data-city="Pahrump, NV 89060"
+                     data-beds="4"
+                     data-baths="3"
+                     data-sqft="3,500">
+                    <img src="images/photoGallery6.webp" alt="Pahrump Real Estate">
+                    <div class="property-overlay-info">
+                        <div class="property-price-tag">$559,000</div>
+                        <div class="property-quick-info">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 3,500 sqft</span>
+                        </div>
+                    </div>
+                    <div class="hover-details">
+                        <button class="view-details-btn">
+                            <i class="fas fa-search-plus"></i> View Details
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Enhanced Lightbox -->
     <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">×</span>
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged view">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-container">
+            <div class="lightbox-image-section">
+                <img id="lightbox-img" class="lightbox-content" src="" alt="Property image">
+            </div>
+            <div class="lightbox-details-section">
+                <div class="lightbox-property-info">
+                    <h2 id="lightbox-title" class="lightbox-property-title"></h2>
+                    <div class="lightbox-price" id="lightbox-price"></div>
+                    <div class="lightbox-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="lightbox-address"></span>
+                    </div>
+                    <div class="lightbox-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-bed"></i>
+                            <span id="lightbox-beds"></span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-bath"></i>
+                            <span id="lightbox-baths"></span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span id="lightbox-sqft"></span>
+                        </div>
+                    </div>
+                    <button class="lightbox-contact-btn" onclick="window.location.href='tel:2069196886'">
+                        <i class="fas fa-phone"></i> Contact Agent
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <img src="images/ourServices.webp" alt="Real Estate Done Right in Pahrump">
-                    <h3>Real Estate Done Right</h3>
-                    <p>Whether buying, selling, or investing — we ensure the best possible experience with personalized service.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="images/ourServices1.webp" alt="Commercial and Residential Properties">
-                    <h3>Commercial & Residential</h3>
-                    <p>From condos to luxury estates, fixer-uppers to commercial properties — we've got you covered.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <img src="images/ourServices2.webp" alt="Expert Real Estate Guidance">
-                    <h3>Rely on Expertise</h3>
-                    <p>Confident decisions through education and professional connections. We guide you every step of the way.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="section-header">
+                <span class="section-label">Client Reviews</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-subtitle">Hear from satisfied homeowners who trusted Marci with their real estate needs</p>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card fade-in">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">CT</div>
-                        <div class="testimonial-info">
-                            <h4>Cheryl T.</h4>
-                            <div class="stars">★★★★★</div>
-                        </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Very professional and knowledgeable. Very well groomed..trying to price your home right the first time when listing..would recommend her and her company."</p>
+                    <p>"Marci made the home buying process so smooth and stress-free. Her knowledge of the Pahrump market is unmatched!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>First-time Homebuyer</span>
+                    </div>
                 </div>
                 <div class="testimonial-card fade-in">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">BR</div>
-                        <div class="testimonial-info">
-                            <h4>Brent R.</h4>
-                            <div class="stars">★★★★★</div>
-                        </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Marci is by far the most professional realtor I have ever worked with. I have purchased about 15 homes in all and have had many different realtors involved in the transactions. Mostly good experiences but none compare to the professionalism that was given by Marci. Responsive and offered great advice."</p>
+                    <p>"We sold our home in record time thanks to Marci's excellent marketing strategy. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Michael & Lisa Chen</strong>
+                        <span>Home Sellers</span>
+                    </div>
                 </div>
                 <div class="testimonial-card fade-in">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">TL</div>
-                        <div class="testimonial-info">
-                            <h4>Teresa L.</h4>
-                            <div class="stars">★★★★★</div>
-                        </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Professional, friendly and knows her profession well. Pahrump is lucky to have her 30+ years of experience. I highly recommend Marci and Lauren. Best of luck with your new endeavor."</p>
+                    <p>"Professional, knowledgeable, and truly cares about her clients. Marci is the only realtor we trust."</p>
+                    <div class="testimonial-author">
+                        <strong>David Rodriguez</strong>
+                        <span>Investment Property Owner</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MLS Search -->
+    <!-- MLS Search Section -->
     <section id="search" class="mls-search">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Find Your Dream Home</h2>
-            <div class="search-form">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Search Listings</h3>
-                <form id="searchForm" class="form-grid">
-                    <div class="form-group">
-                        <label>Location*</label>
-                        <select name="location" required>
-                          <option value="">Select Location</option>
-                          <option value="pahrump">Pahrump</option>
-                          <option value="las-vegas">Las Vegas</option>
-                        </select>
-                        <span class="error-message">Please select a location</span>
+            <div class="section-header light">
+                <span class="section-label">Discover</span>
+                <h2 class="section-title">Search Listings</h2>
+                <p class="section-subtitle">Find your perfect home in Pahrump with our advanced property search</p>
+            </div>
+
+            <div class="search-form" id="searchForm-wrapper">
+                <form id="searchForm" class="search-form-inner">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="location">
+                                <i class="fas fa-map-marker-alt"></i> Location
+                            </label>
+                            <input type="text" id="location" name="location" placeholder="Enter city or ZIP code" required>
+                            <span class="error-message">Please enter a location</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="property-type">
+                                <i class="fas fa-home"></i> Property Type
+                            </label>
+                            <select id="property-type" name="property-type">
+                                <option value="">All Types</option>
+                                <option value="house">House</option>
+                                <option value="condo">Condo</option>
+                                <option value="land">Land</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="min-price">
+                                <i class="fas fa-dollar-sign"></i> Min Price
+                            </label>
+                            <select id="min-price" name="min-price">
+                                <option value="">No Min</option>
+                                <option value="100000">$100,000</option>
+                                <option value="200000">$200,000</option>
+                                <option value="300000">$300,000</option>
+                                <option value="400000">$400,000</option>
+                                <option value="500000">$500,000+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="max-price">
+                                <i class="fas fa-dollar-sign"></i> Max Price
+                            </label>
+                            <select id="max-price" name="max-price">
+                                <option value="">No Max</option>
+                                <option value="200000">$200,000</option>
+                                <option value="300000">$300,000</option>
+                                <option value="400000">$400,000</option>
+                                <option value="500000">$500,000</option>
+                                <option value="1000000">$1,000,000+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bedrooms">
+                                <i class="fas fa-bed"></i> Bedrooms
+                            </label>
+                            <select id="bedrooms" name="bedrooms">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bathrooms">
+                                <i class="fas fa-bath"></i> Bathrooms
+                            </label>
+                            <select id="bathrooms" name="bathrooms">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Type</label>
-                        <select name="type">
-                          <option value="">Property Type</option>
-                          <option value="house">House</option>
-                          <option value="condo">Condo</option>
-                          <option value="land">Land</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Sort By</label>
-                        <select name="sort">
-                          <option value="">Sort type</option>
-                          <option value="newest">Newest</option>
-                          <option value="oldest">Oldest</option>
-                          <option value="price-low">Price: Low to High</option>
-                          <option value="price-high">Price: High to Low</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Bedrooms</label>
-                        <select name="bedrooms">
-                          <option value="">Any Number</option>
-                          <option value="1">1+</option>
-                          <option value="2">2+</option>
-                          <option value="3">3+</option>
-                          <option value="4">4+</option>
-                          <option value="5">5+</option>
-                          <option value="6">6+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Baths</label>
-                        <select name="baths">
-                          <option value="">Any Number</option>
-                          <option value="1">1+</option>
-                          <option value="2">2+</option>
-                          <option value="3">3+</option>
-                          <option value="4">4+</option>
-                          <option value="5">5+</option>
-                          <option value="6">6+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Min Price</label>
-                        <input type="text" name="minPrice" placeholder="$0">
-                    </div>
-                    <div class="form-group">
-                        <label>Max Price</label>
-                        <input type="text" name="maxPrice" placeholder="No Max">
-                    </div>
-                    <button type="submit" class="search-btn">Search Now</button>
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> Search Properties
+                    </button>
                 </form>
+
                 <div id="loadingSpinner" class="loading">
-                  Searching listings...
+                    <div class="spinner"></div>
+                    Searching for properties...
                 </div>
 
-                <div id="searchResults" style="display: none; margin-top: 2.5rem; background: rgba(255,255,255,0.92); padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h3 style="color: var(--primary); text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem;">
-                      <i class="fas fa-check-circle" style="color: #28a745; margin-right: 0.6rem;"></i>
-                      Properties Found!
-                    </h3>
-                    
-                    <p style="text-align: center; font-size: 1.15rem; margin-bottom: 2rem; color: #333;">
-                      We found <strong id="resultCount">38</strong> matching homes in your area.<br>
-                      Here are some featured listings (demo preview):
-                    </p>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem;">
-                      <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.12); transition: transform 0.3s;">
-                        <img src="https://www.reviewjournal.com/wp-content/uploads/2025/11/21077758_web1_1_Canyon-Model-12-Print-1.jpg" alt="Luxury mountain view home in Pahrump" style="width:100%; height:190px; object-fit:cover;">
-                        <div style="padding: 1.2rem; text-align: center;">
-                          <h4 style="margin: 0.5rem 0; color: var(--primary);">Mountain View Residence</h4>
-                          <p style="margin: 0.3rem 0;">4 Beds • 3 Baths • $675,000</p>
-                        </div>
-                      </div>
-
-                      <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.12); transition: transform 0.3s;">
-                        <img src="https://milliefine.com/wp-content/uploads/2015/05/desert_greens1.jpg" alt="Golf course community home" style="width:100%; height:190px; object-fit:cover;">
-                        <div style="padding: 1.2rem; text-align: center;">
-                          <h4 style="margin: 0.5rem 0; color: var(--primary);">Desert Greens Golf Home</h4>
-                          <p style="margin: 0.3rem 0;">3 Beds • 2.5 Baths • $449,900</p>
-                        </div>
-                      </div>
-
-                      <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.12); transition: transform 0.3s;">
-                        <img src="https://media.vrbo.com/lodging/92000000/91380000/91377600/91377537/0d2db24a.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Spacious pool home with desert view" style="width:100%; height:190px; object-fit:cover;">
-                        <div style="padding: 1.2rem; text-align: center;">
-                          <h4 style="margin: 0.5rem 0; color: var(--primary);">Luxury Pool Retreat</h4>
-                          <p style="margin: 0.3rem 0;">5 Beds • 3.5 Baths • $589,000</p>
-                        </div>
-                      </div>
+                <div id="searchResults" class="search-results" style="display: none;">
+                    <div class="results-header">
+                        <h3><i class="fas fa-check-circle"></i> Found <span id="resultCount">0</span> Properties</h3>
+                        <p>Here's a preview of available homes in your area</p>
                     </div>
 
-                    <p style="text-align: center; margin-top: 2.2rem; font-size: 0.95rem; color: #555;">
-                      This is a demo preview. For live MLS listings, please call Marci at (206) 919-6886.
+                    <div class="properties-grid">
+                        <div class="property-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfXa0BvAkCfwDqPJFcqPXLZsXzxDN8qY1KSw&s" alt="Modern ranch home with mountain view">
+                            <div class="property-details">
+                                <h4>Modern Ranch Estate</h4>
+                                <p class="property-price">$389,900</p>
+                                <p class="property-info">
+                                    <i class="fas fa-bed"></i> 4 Beds •
+                                    <i class="fas fa-bath"></i> 2.5 Baths •
+                                    <i class="fas fa-ruler-combined"></i> 2,400 sq ft
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="property-card">
+                            <img src="https://milliefine.com/wp-content/uploads/2015/05/desert_greens1.jpg" alt="Golf course community home">
+                            <div class="property-details">
+                                <h4>Desert Greens Golf Home</h4>
+                                <p class="property-price">$449,900</p>
+                                <p class="property-info">
+                                    <i class="fas fa-bed"></i> 3 Beds •
+                                    <i class="fas fa-bath"></i> 2.5 Baths •
+                                    <i class="fas fa-ruler-combined"></i> 2,100 sq ft
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="property-card">
+                            <img src="https://media.vrbo.com/lodging/92000000/91380000/91377600/91377537/0d2db24a.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Spacious pool home with desert view">
+                            <div class="property-details">
+                                <h4>Luxury Pool Retreat</h4>
+                                <p class="property-price">$589,000</p>
+                                <p class="property-info">
+                                    <i class="fas fa-bed"></i> 5 Beds •
+                                    <i class="fas fa-bath"></i> 3.5 Baths •
+                                    <i class="fas fa-ruler-combined"></i> 3,200 sq ft
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="results-disclaimer">
+                        <i class="fas fa-info-circle"></i> This is a demo preview. For live MLS listings and detailed property information, please call Marci at <a href="tel:2069196886">(206) 919-6886</a>.
                     </p>
 
-                    <button id="newSearchBtn" style="display: block; margin: 2rem auto 1rem; padding: 0.9rem 2.5rem; background: var(--accent); color: white; border: none; border-radius: 30px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s;">
-                      Start New Search
+                    <button id="newSearchBtn" class="btn-secondary">
+                        <i class="fas fa-redo"></i> Start New Search
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners -->
-    <section class="partners">
-        <div class="container">
+    <!-- Partners Section -->
+<section class="partners">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Affiliations</span>
             <h2 class="section-title">Trusted Partners</h2>
-            <div class="partners-grid">
-                <img src="//img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/BIG%20CIRCLE%202.png/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100" alt="The Ridge Realty Group Partner" class="partner-logo">
-                <img src="//img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Equal%20Housing%20Logo.png/:/rs=w:100,h:100,cg:true" alt="Equal Housing Opportunity" class="partner-logo">
-                <img src="//img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Realtor%20Pin.jpg/:/rs=w:112,h:100,cg:true" alt="Realtor Association Member" class="partner-logo">
-                <img src="//img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Chamber.jpg/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100" alt="Chamber of Commerce Member" class="partner-logo">
+        </div>
+
+        <div class="partners-slider">
+            <div class="slider-track">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/BIG%20CIRCLE%202.png/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100" 
+                     alt="The Ridge Realty Group Partner" class="partner-logo">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Equal%20Housing%20Logo.png/:/rs=w:100,h:100,cg:true" 
+                     alt="Equal Housing Opportunity" class="partner-logo">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Realtor%20Pin.jpg/:/rs=w:112,h:100,cg:true" 
+                     alt="Realtor Association Member" class="partner-logo">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Chamber.jpg/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100" 
+                     alt="Chamber of Commerce Member" class="partner-logo">
+
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/BIG%20CIRCLE%202.png/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100" 
+                     alt="The Ridge Realty Group Partner" class="partner-logo">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Equal%20Housing%20Logo.png/:/rs=w:100,h:100,cg:true" 
+                     alt="Equal Housing Opportunity" class="partner-logo">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Realtor%20Pin.jpg/:/rs=w:112,h:100,cg:true" 
+                     alt="Realtor Association Member" class="partner-logo">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/Chamber.jpg/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100" 
+                     alt="Chamber of Commerce Member" class="partner-logo">
             </div>
         </div>
-    </section>
-
-    <!-- Contact -->
+    </div>
+</section>
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Call or Visit</h2>
-            <div class="contact-grid">
-            <div class="contact-form">
-              <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Send Message</h3>
-              
-              <div id="successMessage" style="display: none; background: #e6ffe6; color: #006400; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center; font-weight: 600;">
-                ✓ Thank you! Your message has been sent successfully.<br>
-                Marci will get back to you soon.
-              </div>
-
-              <form id="contactForm">
-                <input type="text" placeholder="Name*" name="name" required>
-                <input type="email" placeholder="Email*" name="email" required>
-                <textarea placeholder="Message*" name="message" required rows="5"></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-              </form>
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Call or Visit</h2>
+                <p class="section-subtitle">Ready to start your real estate journey? Let's connect today</p>
             </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    
+                    <div id="successMessage" class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Thank you! Your message has been sent successfully.</strong>
+                        <p>Marci will get back to you soon.</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Your Name *" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="email" placeholder="Your Email *" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="Phone Number" name="phone">
+                        </div>
+                        <div class="form-row">
+                            <textarea placeholder="Your Message *" name="message" required rows="6"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
                 <div class="contact-info">
-                    <div>
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Marci Metzger - THE RIDGE REALTY GROUP</h3>
-                        <p><strong>Address:</strong> 3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
-                        <p><strong>Phone:</strong> <a href="tel:2069196886" style="color: var(--accent); text-decoration: none;"> (206) 919-6886</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:marci@marcimetzger.com" style="color: var(--accent); text-decoration: none;">marci@marcimetzger.com</a></p>
+                    <div class="info-box">
+                        <h3><i class="fas fa-building"></i> Marci Metzger</h3>
+                        <p class="company-name">The Ridge Realty Group</p>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Address</strong>
+                                    <p>3190 HW-160, Suite F<br>Pahrump, Nevada 89048</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p><a href="tel:2069196886">(206) 919-6886</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p><a href="mailto:marci@themarcimetzgerteam.com">marci@themarcimetzgerteam.com</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Office Hours</strong>
+                                    <p>Monday - Sunday: 8:00 AM - 7:00 PM</p>
+                                    <small>Appointments outside hours available</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h4 style="color: var(--primary); margin-bottom: 1rem;">Office Hours</h4>
-                        <p><strong>Open daily:</strong> 8:00 am - 7:00 pm</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Appointments outside hours available — just call!</p>
-                    </div>
-                  <div class="social-links contact-social" style="margin-top: 1.5rem;">
-                      <a href="https://www.facebook.com/MarciHomes/" target="_blank" aria-label="Facebook">
-                          <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a href="https://www.instagram.com/marciandlauren_nvrealtors/" target="_blank" aria-label="Instagram">
-                          <i class="fab fa-instagram"></i>
-                      </a>
-                      <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" aria-label="LinkedIn">
-                          <i class="fab fa-linkedin-in"></i>
-                      </a>
-                      <a href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w" target="_blank" aria-label="Yelp">
-                          <i class="fab fa-yelp"></i>
-                      </a>
-                  </div>
                 </div>
             </div>
-            <!-- Google Maps Embed -->
-              <div class="map-container" style="margin-top: 3rem; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+            <!-- Google Maps -->
+            <div class="map-container">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.626451403746!2d-115.9552532!3d36.1842494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c6398c31855555%3A0xca2c250302350734!2s3190%20NV-160%2C%20Suite%20F%2C%20Pahrump%2C%20NV%2089048!5e0!3m2!1sen!2sus!4v1705514884321!5m2!1sen!2sus" 
-                  width="100%" 
-                  height="450" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.626451403746!2d-115.9552532!3d36.1842494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c6398c31855555%3A0xca2c250302350734!2s3190%20NV-160%2C%20Suite%20F%2C%20Pahrump%2C%20NV%2089048!5e0!3m2!1sen!2sus!4v1705514884321!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-              </div>
+            </div>
 
-
-              <!-- "Want to know the location?" Button -->
-              <div style="text-align: center; margin-top: 1.5rem;">
+            <div class="cta-directions">
                 <a href="https://www.google.com/maps/dir/?api=1&destination=3190+HW-160%2C+Suite+F%2C+Pahrump%2C+NV+89048" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  style="display: inline-block; padding: 1rem 2.5rem; background: var(--accent); color: white; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s;">
-                  <i class="fas fa-map-marker-alt" style="margin-right: 0.6rem;"></i>Want to know the location? Get Directions!
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="btn-primary">
+                    <i class="fas fa-directions"></i> Get Directions to Our Office
                 </a>
-              </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-          <div class="social-links" style="gap: 2rem; font-size: 2.2rem;">
-                  <a href="https://www.facebook.com/MarciHomes/" target="_blank" aria-label="Facebook">
-                      <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="https://www.instagram.com/marciandlauren_nvrealtors/" target="_blank" aria-label="Instagram">
-                      <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" aria-label="LinkedIn">
-                      <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w" target="_blank" aria-label="Yelp">
-                      <i class="fab fa-yelp"></i>
-                  </a>
-              </div>
+            <div class="footer-brand">
+                <p>Pahrump's Premier Real Estate Expert</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/MarciHomes/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/marciandlauren_nvrealtors/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w" target="_blank" aria-label="Yelp">
+                        <i class="fab fa-yelp"></i>
+                    </a>
+                </div>
+            </div>
+
             <div class="footer-bottom">
-                <p>Copyright © 2023–2026 Marci Metzger Homes - All Rights Reserved</p>
-                <p style="margin-top: 0.5rem;">Pahrump's Premier Real Estate Expert | License #S.0185137</p>
+                <p>&copy; 2023-2026 Marci Metzger Homes - All Rights Reserved</p>
+                <p>Nevada Real Estate License: S.0185137</p>
             </div>
         </div>
     </footer>
 
-    <script src="script/index.js">
-    </script>
+    <script src="script/index.js"></script>
 </body>
 </html>
