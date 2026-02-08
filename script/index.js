@@ -66,7 +66,6 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add scrolled class for styling
     if (currentScroll > 100) {
         header.classList.add('scrolled');
     } else {
@@ -88,15 +87,11 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            
-            // Optionally unobserve after animation
-            // observer.unobserve(entry.target);
+            entry.target.classList.add('visible'); 
         }
     });
 }, observerOptions);
 
-// Observe all fade-in elements and section titles
 document.querySelectorAll('.fade-in, .section-title').forEach(el => {
     observer.observe(el);
 });
@@ -128,7 +123,6 @@ function animateCounter(element) {
     updateCounter();
 }
 
-// Observe stats section for counter animation
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -139,7 +133,6 @@ const statsObserver = new IntersectionObserver((entries) => {
                     animateCounter(counter);
                 }
             });
-            // Unobserve after animation
             statsObserver.unobserve(entry.target);
         }
     });
@@ -200,14 +193,11 @@ if (contactForm && successMessage) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Hide form and show success message
         contactForm.style.display = 'none';
         successMessage.style.display = 'block';
         
-        // Scroll to success message
         successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        // Reset form after delay
         setTimeout(() => {
             contactForm.reset();
             contactForm.style.display = 'block';
@@ -233,7 +223,6 @@ if (searchForm && searchResults) {
         const locationField = this.querySelector('[name="location"]');
         let isValid = true;
 
-        // Validate location field
         if (!locationField.value.trim()) {
             locationField.classList.add('error');
             const errorMsg = locationField.nextElementSibling;
@@ -251,26 +240,22 @@ if (searchForm && searchResults) {
 
         if (!isValid) return;
 
-        // Show loading spinner
         if (loadingSpinner) {
             loadingSpinner.style.display = 'block';
         }
         searchFormWrapper.querySelector('.search-form-inner').style.display = 'none';
 
-        // Simulate API call
         setTimeout(() => {
             if (loadingSpinner) {
                 loadingSpinner.style.display = 'none';
             }
 
-            // Generate random result count
             const fakeCount = Math.floor(Math.random() * 60) + 15;
             const resultCountEl = document.getElementById('resultCount');
             if (resultCountEl) {
                 resultCountEl.textContent = fakeCount;
             }
 
-            // Show results
             searchResults.style.display = 'block';
             searchResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 2000);
@@ -285,7 +270,6 @@ if (searchForm && searchResults) {
     }
 }
 
-// Clear error on input
 const formInputs = document.querySelectorAll('.form-group input, .form-group select');
 formInputs.forEach(input => {
     input.addEventListener('input', function() {
@@ -349,7 +333,6 @@ inputFields.forEach(field => {
 // PREVENT CONSOLE ERRORS
 // ===================================
 
-// Gracefully handle missing elements
 const optionalElements = [
     'hamburger',
     'navLinks',
@@ -367,14 +350,12 @@ optionalElements.forEach(elementId => {
 
 console.log('Marci Metzger Real Estate - Website Loaded Successfully!');
 
-// Gallery Lightbox Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeLightbox = document.querySelector('.close-lightbox');
     
-    // Lightbox detail elements
     const lightboxTitle = document.getElementById('lightbox-title');
     const lightboxPrice = document.getElementById('lightbox-price');
     const lightboxAddress = document.getElementById('lightbox-address');
@@ -382,7 +363,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxBaths = document.getElementById('lightbox-baths');
     const lightboxSqft = document.getElementById('lightbox-sqft');
     
-    // Open lightbox on gallery item click
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
             const imgSrc = this.querySelector('img').src;
@@ -394,10 +374,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const baths = this.getAttribute('data-baths');
             const sqft = this.getAttribute('data-sqft');
             
-            // Set image
             lightboxImg.src = imgSrc;
             
-            // Set property details
             lightboxTitle.textContent = title;
             lightboxPrice.textContent = price;
             lightboxAddress.textContent = `${address}, ${city}`;
@@ -405,19 +383,16 @@ document.addEventListener('DOMContentLoaded', function() {
             lightboxBaths.textContent = `${baths} Baths`;
             lightboxSqft.textContent = `${sqft} sqft`;
             
-            // Show lightbox
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
     });
     
-    // Close lightbox
     closeLightbox.addEventListener('click', function() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
     });
     
-    // Close on background click
     lightbox.addEventListener('click', function(e) {
         if (e.target === lightbox) {
             lightbox.classList.remove('active');
@@ -425,7 +400,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Close on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             lightbox.classList.remove('active');
@@ -435,32 +409,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Hide scroll indicator after leaving the hero section
 document.addEventListener('DOMContentLoaded', function () {
     const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (!scrollIndicator) return; // safety check
+    if (!scrollIndicator) return; 
 
     const heroSection = document.querySelector('#home');
     if (!heroSection) return;
 
-    // Function to check scroll position
     function checkScroll() {
-        // Get the bottom position of the hero section
         const heroBottom = heroSection.getBoundingClientRect().bottom;
         
-        // If user has scrolled past the hero (hero is no longer visible at bottom)
-        if (heroBottom < window.innerHeight - 50) { // -50 for a little buffer
+        if (heroBottom < window.innerHeight - 50) { 
             scrollIndicator.style.opacity = '0';
-            scrollIndicator.style.pointerEvents = 'none'; // prevents clicking when hidden
+            scrollIndicator.style.pointerEvents = 'none'; 
         } else {
             scrollIndicator.style.opacity = '1';
             scrollIndicator.style.pointerEvents = 'auto';
         }
     }
 
-    // Run once on load
     checkScroll();
 
-    // Run on scroll
     window.addEventListener('scroll', checkScroll);
 });
+
