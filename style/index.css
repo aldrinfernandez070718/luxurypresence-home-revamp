@@ -23,11 +23,12 @@
 }
 
 body {
+  
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.7;
     color: #333;
     overflow-x: hidden;
-    background: var(--gradient);
+    background: var(--light);
 }
 
 html {
@@ -529,8 +530,9 @@ section {
     display: flex;
     align-items: center;
     padding: 8rem 2rem;
-    background: url('/images/marci.png') center / 90% auto no-repeat !important;
+    background: url('/images/marci.png') center / 10% auto no-repeat;  
     background-attachment: fixed;
+    background-color: red !important;
 }
 
 .about::before {
@@ -539,7 +541,6 @@ section {
     inset: 0;
     background: linear-gradient(to right, rgba(26, 35, 50, 0.92) 0%, rgba(26, 35, 50, 0.85) 50%, rgba(26, 35, 50, 0.75) 100%);
     z-index: 0;
-    
 }
 
 .about-content {
