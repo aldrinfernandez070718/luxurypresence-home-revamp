@@ -23,7 +23,6 @@
 }
 
 body {
-  
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.7;
     color: #333;
@@ -523,90 +522,80 @@ section {
 /* ===================================
    ABOUT SECTION - WITH HOUSE BACKGROUND
    =================================== */
+
 .about {
     position: relative;
-    min-height: 90vh;               /* slightly less aggressive than 100vh */
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 6rem 2rem;
-    background: url('../images/marci.png') right center / auto 100% no-repeat;
-    background-attachment: fixed;
-    background-color: #0f1a2e;      /* dark fallback color */
+    padding: 8rem 2rem;
 }
 
-/* Stronger overlay for better text readability */
 .about::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(15, 26, 46, 0.92) 0%,
-        rgba(15, 26, 46, 0.75) 40%,
-        rgba(15, 26, 46, 0.35) 70%,
-        rgba(15, 26, 46, 0.15) 100%
-    );
+    background: linear-gradient(to right, rgba(26, 35, 50, 0.92) 0%, rgba(26, 35, 50, 0.85) 50%, rgba(26, 35, 50, 0.75) 100%);
+    z-index: 0;
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    background: url('images/MarciMetzger.webp') right center no-repeat;
+    background-size: contain;
+    min-height: 600px;
+    align-items: center;
+}
+
+.about .container {
+    position: relative;
     z-index: 1;
 }
 
-/* Text container – cleaner, more modern */
-.about-content {
+.about .section-header {
     position: relative;
-    z-index: 2;
-    max-width: 620px;
-    width: 100%;
-    margin-left: 8%;               /* moves box more to the left */
-    background: rgba(26, 35, 50, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
-    padding: 3rem 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.about .section-label {
+    color: var(--gold);
+}
+
+.about .section-title {
+    color: white;
+}
+
+.about .section-title::after {
+    background: var(--gold);
+}
+
+.about .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-text {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    max-width: 550px;
+    backdrop-filter: blur(10px);
 }
 
 .about-text h3 {
-    color: white;
-    font-size: 2.1rem;
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-}
-
-.about-text .lead-text {
-    color: #e0e0ff;
-    font-size: 1.22rem;
-    font-weight: 500;
-    line-height: 1.7;
-    margin-bottom: 1.6rem;
+    font-size: 2.2rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
 }
 
 .about-text p {
-    color: #d0d0ff;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1.3rem;
-}
-
-/* Mobile adjustments */
-@media (max-width: 900px) {
-    .about {
-        background: url('../images/marci.png') center / cover no-repeat;
-        background-attachment: scroll;   /* fixed often bad on mobile */
-        padding: 5rem 1.5rem;
-    }
-    
-    .about-content {
-        margin-left: 0;
-        max-width: 100%;
-        padding: 2.2rem 1.8rem;
-    }
-    
-    .about::before {
-        background: rgba(15, 26, 46, 0.82); /* stronger overlay on mobile */
-    }
-
-    
+    margin-bottom: 1.2rem;
+    line-height: 1.9;
+    color: #555;
 }
 #about .section-label,
 #about .section-title,
@@ -2144,3 +2133,4 @@ footer .social-links a[href*="yelp"]:hover { background: #d32323; }
 .contact .section-title {
     color: var(--gold);
 }
+
